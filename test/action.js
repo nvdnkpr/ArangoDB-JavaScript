@@ -21,6 +21,7 @@ var db, actions;
 describe("action", function () {
 
   before(function (done) {
+    this.timeout(50000);
     if (typeof window !== "undefined") {
       port = window.port;
     } else {
