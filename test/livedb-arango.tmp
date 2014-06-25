@@ -1,0 +1,39 @@
+var arango,port, arangolivedb;
+try {
+    arango = require('arangojs')
+} catch (e) {
+    arango = require('..')
+}
+arangolivedb = require('../livedb-arango/arango.js');
+
+
+function check(done, f) {
+    try {
+        f()
+        done()
+    } catch (e) {
+        //console.log(e);
+        done(e)
+    }
+}
+
+describe("livedb test", function() {
+
+
+    var arangodb = arangolivedb(arango.Connection("http://127.0.0.1:"+port));
+    var livedb = require('livedb').client(arangodb);
+
+    it('should create a document', function(done) {
+        this.timeout(5000);
+        livedb.submit('mm', 'nn1', {create:{type:'json0', data:[1,2,3]}}, function(err, version, transformedByOps, snapshot) {
+            check(done, function() {
+                console.log("sss");
+                console.log(err);
+                console.log(version);
+                console.log(transformedByOps);
+                console.log(snapshot);
+            });
+        });
+
+    });
+});
