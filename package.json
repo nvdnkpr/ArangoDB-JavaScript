@@ -24,7 +24,7 @@
     "mocha": "*",
     "chai": "*",
     "should": "*",
-    "component":"*",
+    "component":"~0.9.0",
     "karma":"*",
     "karma-mocha":"*",
     "karma-chai":"*",
