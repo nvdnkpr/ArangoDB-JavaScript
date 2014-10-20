@@ -176,32 +176,13 @@ describe("indexWithDefaultCollection", function () {
       });
     })
 
-    it('create a bitarray index', function (done) {
-      this.timeout(50000);
-      db.index.createBitarrayIndex(["x", [0, 1, []], "y", ["a", "b", []]], function (err, ret, message) {
-        check(done, function () {
-          ret.error.should.equal(false);
-          message.status.should.equal(201);
-        });
-      });
-    })
-    it('create same bitarray again and expect a 200', function (done) {
-      this.timeout(50000);
-      db.index.createBitarrayIndex(["x", [0, 1, []], "y", ["a", "b", []]], function (err, ret, message) {
-        check(done, function () {
-          ret.error.should.equal(false);
-          message.status.should.equal(200);
-        });
-      });
-    })
-
     it('list all we created so far', function (done) {
       this.timeout(50000);
       db.index.list(function (err, ret, message) {
         check(done, function () {
           indices = ret.indexes;
           ret.error.should.equal(false);
-          ret.indexes.length.should.equal(8);
+          ret.indexes.length.should.equal(7);
           message.status.should.equal(200);
         });
       });
@@ -239,7 +220,7 @@ describe("indexWithDefaultCollection", function () {
         check(done, function () {
           indices = ret.indexes;
           ret.error.should.equal(false);
-          ret.indexes.length.should.equal(7);
+          ret.indexes.length.should.equal(6);
           message.status.should.equal(200);
         });
       });
