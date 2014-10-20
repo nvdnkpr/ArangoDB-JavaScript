@@ -14,6 +14,7 @@ before_install:
   - "sudo apt-get install defoma libgl1-mesa-dri xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic"
   - "wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
   - "sudo mkdir -p /usr/share/desktop-directories"
+  - "sudo apt-get install libappindicator1"
   - "sudo dpkg -i google-chrome-stable_current_amd64.deb"
   - "sudo apt-get install -f"
   - "sudo dpkg -i google-chrome-stable_current_amd64.deb"
