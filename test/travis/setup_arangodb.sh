@@ -3,7 +3,8 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR
 
-NAME=ArangoDB-2.2
+VERSION=2.2.5
+NAME=ArangoDB-$VERSION
 
 if [ ! -d "$DIR/$NAME" ]; then
   # download ArangoDB
@@ -18,11 +19,7 @@ PID=$(echo $PPID)
 TMP_DIR="/tmp/arangodb.$PID"
 PID_FILE="/tmp/arangodb.$PID.pid"
 ARANGODB_DIR="$DIR/$NAME"
-
-ARANGOD="${ARANGODB_DIR}/bin/arangod"
-if [ "$ARCH" == "x86_64" ]; then
-  ARANGOD="${ARANGOD}"
-fi
+ARANGOD="${ARANGODB_DIR}/bin/arangod_x86_64"
 
 # create database directory
 mkdir ${TMP_DIR}
@@ -33,8 +30,8 @@ ${ARANGOD} \
     --database.directory ${TMP_DIR} \
     --configuration none \
     --server.endpoint tcp://127.0.0.1:8529 \
-    --javascript.startup-directory ${ARANGODB_DIR}/js \
     --javascript.app-path ${ARANGODB_DIR}/js/apps \
+    --javascript.startup-directory ${ARANGODB_DIR}/js \
     --database.maximal-journal-size 1048576 \
     --server.disable-authentication true &
 
