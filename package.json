@@ -1,6 +1,6 @@
 {
-  "name": "arango",
-  "version": "2.0.0",
+  "name": "arangojs",
+  "version": "2.0.1",
   "description": "ArangoDB javascript client",
   "keywords": [
     "arangodb",
@@ -40,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/kaerus-component/arango.git"
+    "url": "git://github.com/triAGENS/ArangoDB-JavaScript.git"
   },
   "main": "index.js",
   "license": "APACHE2_0"
