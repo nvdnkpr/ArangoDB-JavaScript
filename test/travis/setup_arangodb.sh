@@ -21,7 +21,7 @@ ARANGODB_DIR="$DIR/$NAME"
 
 ARANGOD="${ARANGODB_DIR}/bin/arangod"
 if [ "$ARCH" == "x86_64" ]; then
-  ARANGOD="${ARANGOD}_x86_64"
+  ARANGOD="${ARANGOD}"
 fi
 
 # create database directory
