@@ -78,15 +78,6 @@ describe("admin", function () {
       });
     });
   })
-  it('should be able to flush the arango dbs modules', function (done) {
-    this.timeout(50000);
-    db.admin.modulesFlush(function (err, ret) {
-      check(done, function () {
-        ret.error.should.equal(false);
-        ret.code.should.equal(200);
-      });
-    });
-  });
   it('should be able to get the arango dbs time', function (done) {
     this.timeout(50000);
     db.admin.time(function (err, ret) {
