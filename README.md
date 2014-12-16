@@ -124,24 +124,23 @@ The standalone version yields a global ```arango``` object.
 
 API
 ===
-The following API:s are (more or less) supported, check out the ArangoDB [documentation](http://www.arangodb.org/manuals/current/).
+The following API:s are (more or less) supported, check out the ArangoDB [documentation](https://docs.arangodb.com/).
   
-  * [transaction](http://www.arangodb.org/manuals/current/HttpTransactions.html)
-  * [collection](http://www.arangodb.org/manuals/current/HttpCollection.html)
-  * [database](http://www.arangodb.org/manuals/current/HttpDatabase.html)
-  * [document](http://www.arangodb.org/manuals/current/RestDocument.html)
-  * [action](http://www.arangodb.org/manuals/current/UserManualActions.html)
-  * [cursor](http://www.arangodb.org/manuals/current/HttpCursor.html)
-  * [simple](http://www.arangodb.org/manuals/current/HttpSimple.html)
-  * [index](http://www.arangodb.org/manuals/current/HttpIndex.html)
-  * [admin](http://www.arangodb.org/manuals/current/HttpSystem.html)
-  * [aqlfunction](https://www.arangodb.org/manuals/current/HttpAqlFunctions.html)
-  * [batch](https://www.arangodb.org/manuals/current/HttpBatch.html)
-  * [query](http://www.arangodb.org/manuals/current/HttpQuery.html)
-  * [graph](http://www.arangodb.org/manuals/current/HttpGraph.html)
-  * [batch](http://www.arangodb.org/manuals/current/HttpBatch.html)
-  * [edge](http://www.arangodb.org/manuals/current/RestEdge.html)
-  * [user](http://www.arangodb.org/manuals/current/HttpUser.html)
+  * [transaction](https://docs.arangodb.com/Transactions/README.html)
+  * [collection](https://docs.arangodb.com/Collections/README.html)
+  * [database](https://docs.arangodb.com/Databases/README.html)
+  * [document](https://docs.arangodb.com/Documents/README.html)
+  * [action](https://docs.arangodb.com/ArangoActions/README.html)
+  * [cursor](https://docs.arangodb.com/HttpAqlQueryCursor/README.html)
+  * [simple](https://docs.arangodb.com/HttpSimpleQuery/README.html)
+  * [index](https://docs.arangodb.com/HttpIndexes/README.html)
+  * [admin](https://docs.arangodb.com/HttpUserManagement/README.html)
+  * [aqlfunction](https://docs.arangodb.com/HttpAqlUserFunctions/README.html)
+  * [batch](https://docs.arangodb.com/HttpBatchRequest/README.html)
+  * [query](https://docs.arangodb.com/HttpAqlQuery/README.html)
+  * [graph](https://docs.arangodb.com/HttpGharial/README.html)
+  * [edge](https://docs.arangodb.com/HttpEdge/README.html)
+  * [user](https://docs.arangodb.com/HttpUserManagement/README.html)
 
 
 The API methods return a [promise](https://github.com/kaerus-component/uP) but you may also pass a callback function as last argument which then gets called with the result.
