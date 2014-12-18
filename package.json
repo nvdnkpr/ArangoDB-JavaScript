@@ -13,7 +13,7 @@
   },
   "contributors": [
     "anders elo <anders@kaerus.com>",
-    "florian bartels <f.bartels@triagens.de>"
+    "florian bartels <f.bartels@triagens.de>",
     "alan plum <me@pluma.io>"
   ],
   "dependencies":{
