@@ -161,7 +161,6 @@ describe("cursor", function () {
         ret.error.should.equal(false);
         ret.hasMore.should.equal(false);
         ret.count.should.equal(1);
-        message.status.should.equal(201);
       });
     });
   })
