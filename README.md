@@ -1,18 +1,18 @@
-[![Build Status](https://travis-ci.org/kaerus-component/arango.png)](https://travis-ci.org/kaerus-component/arango)
+[![Build Status](https://travis-ci.org/triAGENS/ArangoDB-JavaScript.png)](https://travis-ci.org/triAGENS/ArangoDB-JavaScript)
 
 ArangoDB client
 ===============
 A client for the ArangoDB nosql database for nodejs and browsers.
 
-NOTE: This repo is now officially maintained by the developers of ArangoDB @ https://github.com/triAGENS/ArangoDB-JavaScript
+**NOTE: This is the legacy 2.x version of the client. As of version 3.0.0 the new client lives at [arangodb/arangojs](https://github.com/arangodb/arangojs).**
 
-Meanwhile I'll keep exploring new designs for my own personal pleasure.
+For kaerus original `arango` module see [kaerus-component/arango](https://github.com/kaerus-component/arango).
 
 
 Introduction
 ============
-You can use arango-client either as node.js server module or from a web client.
-Since arango-client is written as a commonJS module you can just require it in your nodejs project or using the generated build file which you can include into your client side app.
+You can use arangojs either as node.js server module or from a web client.
+Since arangojs is written as a commonJS module you can just require it in your nodejs project or using the generated build file which you can include into your client side app.
 
 
 Install
@@ -20,7 +20,7 @@ Install
 ```
 From source: `git clone git://github.com/triAGENS/ArangoDB-JavaScript`
 web component: `component install triAGENS/ArangoDB-JavaScript`
-nodejs module: `npm install arangojs`
+nodejs module: `npm install arangojs@2`
 
 ```
 
@@ -53,7 +53,7 @@ Quick start
 ===========
 To use the client you require it at a commonJS module.
 ```javascript
-var arango = require('arango');
+var arango = require('arangojs');
 ``` 
 
 Then you initialize a connection which returns a db handle.
@@ -80,7 +80,7 @@ A minimal html page using the arangodb client from a web app can look like this.
     <div id="test"></div>
     <script src="../build/build.js"></script>
     <script>
-        var arango = require('arango'),
+        var arango = require('arangojs'),
             elem = document.getElementById('test'),
             db = new arango.Connection;
 
@@ -124,7 +124,7 @@ The standalone version yields a global ```arango``` object.
 
 API
 ===
-The following API:s are (more or less) supported, check out the ArangoDB [documentation](https://docs.arangodb.com/).
+The following APIs are (more or less) supported, check out the ArangoDB [documentation](https://docs.arangodb.com/).
   
   * [transaction](https://docs.arangodb.com/Transactions/README.html)
   * [collection](https://docs.arangodb.com/Collections/README.html)
@@ -656,9 +656,8 @@ module.exports = Arango.api('stub',StubAPI);
 
 License
 =======
-```
 Copyright (c) 2012 Kaerus (kaerus.com), Anders Elo <anders @ kaerus com>.
-```
+
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
